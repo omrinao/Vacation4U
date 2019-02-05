@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="603.0" maxWidth="1100.0" prefHeight="540.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.unRegisterView">
+    <children>
+        <BorderPane prefHeight="563.0" prefWidth="800.0">
+            <top>
+                <Label prefHeight="52.0" prefWidth="155.0" text="Vacation4U" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="34.0" />
+                    </font>
+                </Label>
+            </top>
+         <right>
+            <BorderPane prefHeight="645.0" prefWidth="199.0" BorderPane.alignment="CENTER">
+               <right>
+                        <Pane prefHeight="27.0" prefWidth="13.0" BorderPane.alignment="CENTER" />
+               </right>
+               <center>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="161.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="btn_exit" mnemonicParsing="false" onMouseClicked="#exit" text="יציאה" />
+                                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <Separator layoutX="56.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <Button fx:id="btn_login" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#login" text="כניסה למערכת" />
+                            </children>
+                        </HBox>
+               </center>
+               <bottom>
+                        <Pane prefHeight="620.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="44.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#setVacationsUnRegistered" text="לצפייה בכל החופשות" />
+                     </children></Pane>
+               </bottom>
+            </BorderPane>
+         </right>
+         <center>
+            <GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="700.0" BorderPane.alignment="TOP_CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="591.0" minWidth="10.0" prefWidth="349.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="746.0" minWidth="10.0" prefWidth="351.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="331.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="517.0" minHeight="10.0" prefHeight="315.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="209.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <Pane prefHeight="26.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="349.0" text="אמסטרדם">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </top>
+                     <right>
+                        <Pane prefHeight="162.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="BOTTOM_RIGHT" layoutY="177.0" prefHeight="27.0" prefWidth="272.0" text="תאריכים: 20-25/12/2018">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </right>
+                     <bottom>
+                        <Pane prefHeight="30.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="345.0" text="מחיר: $180">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <top>
+                        <Pane prefHeight="26.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="350.0" text="לונדון">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </top>
+                     <right>
+                        <Pane prefHeight="275.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="BOTTOM_RIGHT" layoutY="161.0" prefHeight="43.0" prefWidth="273.0" text="תאריכים: 22-26/12/2018">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </right>
+                     <bottom>
+                        <Pane prefHeight="30.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="348.0" text="מחיר: $150">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <top>
+                        <Pane prefHeight="26.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="349.0" text="רומא">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </top>
+                     <right>
+                        <Pane prefHeight="275.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="BOTTOM_RIGHT" layoutX="-151.0" prefHeight="189.0" prefWidth="423.0" text="תאריכים: 03-07/01/2019">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </right>
+                     <bottom>
+                        <Pane prefHeight="30.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="346.0" text="מחיר: $140">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <top>
+                        <Pane prefHeight="26.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="350.0" text="פריז">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </top>
+                     <right>
+                        <Pane prefHeight="275.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="BOTTOM_RIGHT" prefHeight="188.0" prefWidth="273.0" text="תאריכים: 25-31/12/2018">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </right>
+                     <bottom>
+                        <Pane prefHeight="30.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="348.0" text="מחיר: $220">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </center>
+         <left>
+            <Pane prefHeight="645.0" prefWidth="9.0" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <Pane prefHeight="13.0" prefWidth="1100.0" BorderPane.alignment="CENTER" />
+         </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

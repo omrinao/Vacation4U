@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.PublishVactionView">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="598.0" text="פרסם חופשה" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </top>
+         <left>
+            <Pane prefHeight="359.0" prefWidth="80.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="359.0" prefWidth="369.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox prefHeight="359.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator layoutX="10.0" layoutY="35.0" prefHeight="20.0" prefWidth="200.0" />
+                  <TextField fx:id="tf_destination" promptText="יעד החופשה" />
+                  <Separator prefHeight="20.0" prefWidth="200.0" />
+                  <DatePicker fx:id="dp_departure" promptText="תאריך יציאה" />
+                  <Separator layoutX="10.0" layoutY="38.0" prefHeight="20.0" prefWidth="200.0" />
+                  <DatePicker fx:id="dp_return" promptText="תאריך חזרה" />
+                  <Separator layoutX="10.0" layoutY="38.0" prefHeight="20.0" prefWidth="200.0" />
+                  <TextField fx:id="tf_airline" layoutX="10.0" layoutY="166.0" promptText="חברת תעופה" />
+                  <Separator layoutX="10.0" layoutY="94.0" prefHeight="20.0" prefWidth="200.0" />
+                  <TextField fx:id="tf_quantity" promptText="כמות כרטיסים" />
+                  <Separator layoutX="10.0" layoutY="122.0" prefHeight="20.0" prefWidth="200.0" />
+                  <TextField fx:id="tf_price" layoutX="10.0" layoutY="127.0" promptText="מחיר" />
+                  <Separator layoutX="10.0" layoutY="150.0" prefHeight="20.0" prefWidth="200.0" />
+                  <TextField fx:id="tf_origin" layoutX="10.0" layoutY="269.0" promptText="מוצא חופשה" />
+                  <Separator layoutX="10.0" layoutY="10.0" prefHeight="13.0" prefWidth="151.0" />
+                  <HBox prefHeight="40.0" prefWidth="151.0">
+                     <children>
+                        <Button fx:id="btn_publish" mnemonicParsing="false" onMouseClicked="#publishVacation" text="פרסם!" />
+                        <Separator orientation="VERTICAL" prefHeight="39.0" prefWidth="19.0">
+                           <padding>
+                              <Insets left="5.0" top="5.0" />
+                           </padding>
+                        </Separator>
+                        <CheckBox fx:id="cb_trade" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="מוכן להחליף?">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

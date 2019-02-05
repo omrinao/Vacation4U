@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.UpdateView">
+
+    <children>
+
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="593.0" text="עדכון משתמש" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </top>
+            <right>
+                <VBox prefHeight="332.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="132.0" text="שם משתמש:">
+                            <font>
+                                <Font size="17.0" />
+                            </font></Label>
+                        <TextField fx:id="tf_userNameRead" />
+                        <Button fx:id="btn_update_search" mnemonicParsing="false" onMouseClicked="#send_read_update" prefHeight="32.0" prefWidth="49.0" text="חפש" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="151.0" text="אנא הזן שם משתמש" textFill="RED" visible="false" />
+                    </children></VBox>
+            </right>
+            <left>
+
+            </left>
+            <bottom>
+                <Pane prefHeight="22.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+            </bottom>
+            <center>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <right>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                            <children>
+
+                                <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="22.0" prefWidth="60.0" text="סיסמא:  " />
+                                <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="80.0" text="תאריך לידה:  " />
+                                <Label layoutX="10.0" layoutY="10.0" prefHeight="22.0" prefWidth="64.0" text="שם פרטי:  " />
+                                <Label layoutX="10.0" layoutY="27.0" prefHeight="59.0" prefWidth="82.0" text="שם משפחה:  " />
+                                <Label layoutX="10.0" layoutY="44.0" prefHeight="25.0" prefWidth="75.0" text="עיר מגורים:  " />
+                            </children></VBox>
+                    </right>
+                    <center>
+                        <VBox prefHeight="332.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <PasswordField fx:id="pf_passwordUpdate" disable="true" layoutX="10.0" layoutY="10.0" />
+                                <Separator layoutX="10.0" layoutY="35.0" prefHeight="15.0" prefWidth="344.0" />
+                                <DatePicker fx:id="dp_dateUpdate" disable="true" prefHeight="25.0" prefWidth="345.0" />
+                                <Separator layoutX="10.0" layoutY="63.0" prefHeight="17.0" prefWidth="124.0" />
+                                <TextField fx:id="tf_firstName" disable="true" layoutX="10.0" layoutY="110.0" />
+                                <Separator layoutX="10.0" layoutY="169.0" prefHeight="16.0" prefWidth="344.0" />
+                                <TextField fx:id="tf_lastName" disable="true" layoutX="10.0" layoutY="35.0" />
+                                <Separator layoutX="10.0" layoutY="91.0" prefHeight="15.0" prefWidth="124.0" />
+                                <TextField fx:id="tf_hometown" disable="true" layoutX="10.0" layoutY="60.0" />
+                            </children>
+                        </VBox>
+                    </center>
+                    <left>
+                        <Pane prefHeight="248.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+                    </left>
+                    <bottom>
+                        <Pane prefHeight="84.0" prefWidth="424.0" BorderPane.alignment="CENTER">
+                            <Button fx:id="btn_sendUpdate" alignment="CENTER" disable="true" layoutX="160.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#send_update" prefHeight="25.0" prefWidth="47.0" text="עדכן" />
+                            <Button fx:id="btn_cancel_update" disable="true" mnemonicParsing="false" onAction="#update_cancel" text="ביטול" visible="false" />
+                        </Pane>
+                    </bottom>
+                </BorderPane>
+            </center>
+         <left>
+            <VBox prefHeight="332.0" prefWidth="201.0" BorderPane.alignment="CENTER">
+               <children>
+                   <Label fx:id="lbl_passwordUpdateErr" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="45.0" prefHeight="23.0" prefWidth="199.0" text="יש להזין סיסמא בת 8 תווים לפחות" textFill="RED" visible="false" />
+                   <Label fx:id="lbl_dateUpdateErr" alignment="CENTER_RIGHT" layoutX="56.0" layoutY="87.0" prefHeight="52.0" prefWidth="199.0" text="שימוש במערכת מעל גיל 18 בלבד!" textFill="RED" visible="false" />
+                   <Label fx:id="lbl_firstNameUpdateErr" alignment="CENTER_RIGHT" layoutX="134.0" layoutY="126.0" prefHeight="32.0" prefWidth="197.0" text="אנא הזן שם פרטי" textFill="RED" visible="false" />
+                   <Label fx:id="lbl_lastNameUpdateErr" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="164.0" prefHeight="52.0" prefWidth="199.0" text="אנא הזן שם משפחה" textFill="RED" visible="false" />
+                   <Label fx:id="lbl_hometownUpdateErr" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="206.0" prefHeight="36.0" prefWidth="198.0" text="אנא הזן עיר מגורים" textFill="RED" visible="false" />
+                   <Label fx:id="lbl_userNameUpdateErr" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="5.0" prefHeight="26.0" prefWidth="195.0" textAlignment="RIGHT" textFill="RED" visible="false" />
+               </children></VBox>
+         </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.PaymentView">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="594.0" text="מסך תשלום" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <Pane prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <VBox prefHeight="298.0" prefWidth="138.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="133.0" text="בחר אמצעי תשלום:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="cb_visa" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#setVisa" prefHeight="33.0" prefWidth="120.0" text="Visa" />
+                  <CheckBox fx:id="cb_paypal" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#setPaypal" prefHeight="33.0" prefWidth="120.0" text="Paypal" />
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox prefHeight="280.0" prefWidth="308.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefHeight="23.0" prefWidth="272.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></Separator>
+                  <TextField fx:id="tf_cardNum" alignment="CENTER_RIGHT" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="277.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></TextField>
+                  <Separator layoutX="10.0" layoutY="10.0" prefHeight="23.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></Separator>
+                  <TextField fx:id="tf_cardDate" alignment="CENTER_RIGHT" disable="true" layoutX="40.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="277.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Separator layoutX="10.0" layoutY="58.0" prefHeight="23.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></Separator>
+                  <TextField fx:id="tf_cardCVV" alignment="CENTER_RIGHT" disable="true" layoutX="40.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="277.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Separator layoutX="40.0" layoutY="106.0" prefHeight="23.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="btn_visa" disable="true" mnemonicParsing="false" onMouseClicked="#payVisa" text="שלח תשלום">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Separator prefHeight="30.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></Separator>
+                  <TextField fx:id="tf_username" disable="true" prefHeight="26.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></TextField>
+                  <Separator prefHeight="21.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></Separator>
+                  <PasswordField fx:id="pf_password" disable="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Separator layoutX="40.0" layoutY="258.0" prefHeight="21.0" prefWidth="308.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="btn_paypal" disable="true" mnemonicParsing="false" onMouseClicked="#payPaypal" text="שלח תשלום">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="280.0" prefWidth="183.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="151.0" text="תשלום באמצעות Visa:" underline="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="75.0" text="מספר כרטיס:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="27.0" prefHeight="52.0" prefWidth="79.0" text="תוקף הכרטיס:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="44.0" prefHeight="40.0" prefWidth="30.0" text=":CVV" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="112.0" prefHeight="20.0" prefWidth="150.0" text="מספר תשלומים:" />
+                  <ChoiceBox fx:id="cb_tash" disable="true" prefWidth="150.0" />
+                  <Label alignment="BOTTOM_RIGHT" prefHeight="61.0" prefWidth="150.0" text="תשלום באמצעות Paypal:" underline="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="73.0" text="שם משתמש:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="244.0" prefHeight="53.0" prefWidth="44.0" text="סיסמא:" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
